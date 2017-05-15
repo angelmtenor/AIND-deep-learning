@@ -54,7 +54,8 @@ def trainPerceptronAlgorithm(X, y, learn_rate=0.01, num_epochs=25):
         boundary_lines.append((-W[0] / W[1], -b / W[1]))
     return boundary_lines
 
+
 if __name__ == '__main__':
     # data = pd.read_csv('B_data.csv',  names = ['X1','X2', 'y'], header = None, index_col = False)
     data = np.genfromtxt('B_data.csv', delimiter=',')
-    trainPerceptronAlgorithm((data[:, 0:2]), data[:,2])
+    trainPerceptronAlgorithm((data[:, 0:2]), data[:, 2])
