@@ -23,7 +23,7 @@ xor.add(Activation("sigmoid"))
 xor.compile(loss="categorical_crossentropy", optimizer="adam", metrics=['accuracy'])
 
 # Uncomment this line to print the model architecture
-# xor.summary()
+xor.summary()
 
 # Fitting the model
 history = xor.fit(X, y, epochs=400, verbose=0)
